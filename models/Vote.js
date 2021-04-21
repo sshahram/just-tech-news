@@ -19,7 +19,7 @@ Vote.init(
             }
         },
         post_id: {
-            type: DataTypes,INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: 'post',
