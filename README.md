@@ -61,7 +61,7 @@ This application is also deployed at Heroku. Please checkout the following link:
 
 Here is an example of how posts' data should be returned in Insomnia Core:
 
-![alt=api-posts](./utils/get-route-posts.JPG)
+![alt=get-route-posts](./utils/images/get-route-posts.jpg)
 
 
 ## Questions
