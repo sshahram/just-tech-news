@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const{Post, User, Comment} = require('../models');
+const { Post, User, Comment } = require('../models');
 
 router.get('/', (req, res) => {
     console.log(req.session);
@@ -31,8 +31,8 @@ router.get('/', (req, res) => {
         .then(dbPostData => {
             // pass a single post object into the homepage template
             // console.log(dbPostData[0]);
-            const posts =dbPostData.map(post => post.get({plain: true}));
-            res.render('homepage', {posts});
+            const posts = dbPostData.map(post => post.get({ plain: true }));
+            res.render('homepage', { posts });
         })
         .catch(err => {
             console.log(err);
@@ -42,7 +42,7 @@ router.get('/', (req, res) => {
 
 // route for login page
 router.get('/login', (req, res) => {
-    if(req.session.loggedIn) {
+    if (req.session.loggedIn) {
         res.redirect('/');
         return;
     }
@@ -78,16 +78,19 @@ router.get('/post/:id', (req, res) => {
         ]
     })
         .then(dbPostData => {
-            if(!dbPostData) {
-                res.status(404).json({message: 'No post found with this id'});
+            if (!dbPostData) {
+                res.status(404).json({ message: 'No post found with this id' });
                 return;
             }
 
             // serialize the data
-            const post = dbPostData.get({plain: true});
+            const post = dbPostData.get({ plain: true });
 
             // pass data to template
-            res.render('single-post', {post});
+            res.render('single-post', {
+                post,
+                loggedIn: req.session.loggedIn
+            });
         })
         .catch(err => {
             console.log(err);
