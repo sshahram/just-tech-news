@@ -24,7 +24,7 @@
 </form>
 
 <div class="comments">
-    {{#each post.comments as |comment|}}
+    {{#each post.comments}}
     <section class="comment">
         <div class="meta">
             {{user.username}} on {{created_at}}

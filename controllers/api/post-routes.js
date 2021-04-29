@@ -81,29 +81,28 @@ router.get('/:id', (req, res) => {
 // create a post
 router.post('/', (req, res) => {
     // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
-    Post.create({
-        title: req.body.title,
-        post_url: req.body.post_url,
-        user_id: req.body.user_id
-    })
-        .then(dbPostData => res.json(dbPostData))
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+    if (req.session) {
+        Post.create({
+            title: req.body.title,
+            post_url: req.body.post_url,
+            user_id: req.session.user_id
+        })
+            .then(dbPostData => res.json(dbPostData))
+            .catch(err => {
+                console.log(err);
+                res.status(500).json(err);
+            });
+    }
 });
-
 // PUT /api/posts/upvote
 router.put('/upvote', (req, res) => {
-    // make sure the session exists first
+    // custom static method created in models/Post.js
     if (req.session) {
-        // pass section id along with all destructured prperties on req.body
-        // custom static method created in models/Post.js
-        Post.upvote({...req.body, user_id: req.session.user_id}, { Vote, Comment, User })
+        Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
             .then(updatedVoteData => res.json(updatedVoteData))
             .catch(err => {
                 console.log(err);
-                res.status(400).json(err);
+                res.status(500).json(err);
             });
     }
 });
