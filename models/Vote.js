@@ -21,6 +21,8 @@ Vote.init(
         post_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            onDelete: 'CASCADE',
+            onUpdate: 'CASCADE',
             references: {
                 model: 'post',
                 key: 'id'
