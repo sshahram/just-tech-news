@@ -45,7 +45,7 @@ async function signupFormHandler(event) {
         // console.log(response);
         // check the response status
         if(response.ok) {
-            document.location.replace('/dashboard');
+            document.location.replace('/');
         } else {
             alert(response.statusText);
         }
