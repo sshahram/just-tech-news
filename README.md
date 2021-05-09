@@ -3,8 +3,7 @@
 
 ## Description
 
-"Just-tech-news" project provides a robust back end for a website that contains technology news. This website is very similar to "Hacker News Website".
-Using this back end, we are able to create and update users and posts. Different users are also able to comment and vote on different posts.
+"Just-tech-news" is a technology news website built with a polished and clean frond end and a robust back end. Using this website, users are able to sing up for new accounts and then use their login credentials to login back at a later time. They are also able to view their own dashboard which shows all their posts along with the ability to edit/delete their posts. In addition, users are able to view other members' posts in the main webpage and make comments and vote on them.
 
 ## Table of Contents
 
@@ -29,8 +28,10 @@ Third, run the following commands inside your terminal:
 ```bash
 git clone <from-repository-on-github>
 npm install
+run schema.sql
 node server.js
 ```
+Or you can use the link provided in the "Live-URL" section to view the deployed application on heroku.
 
 ## License
 
