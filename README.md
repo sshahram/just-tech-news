@@ -52,17 +52,23 @@ You can use "Insomnia Core" or "Postman" to test different API routes for "users
 
 ## Live-URL
 
-This application is also deployed at Heroku. Please checkout the following link: 
-* [Live-URL-Users](https://just-tech-news-ss-042221.herokuapp.com/api/users)
-* [Live-URL-Posts](https://just-tech-news-ss-042221.herokuapp.com/api/posts)
-* [Live-URL-Comments](https://just-tech-news-ss-042221.herokuapp.com/api/comments)
+This application is also deployed on Heroku. Please checkout the following link for the live url: 
+* [Live-URL](https://just-tech-news-0430-ss.herokuapp.com/)
 
 
 ## Screenshots
 
-Here is an example of how posts' data should be returned in Insomnia Core:
+Please see below for the screenshots of homepage, dashboard and sign in/sign up pages:
+Homepage:
 
-![alt=get-route-posts](./utils/images/get-route-posts.jpg)
+* ![alt=home](./utils/images/homepage.JPG)
+
+Dashboard:
+
+* ![alt=dashboard](./utils/images/dashboard.JPG)
+
+Sign In / Sign Up:
+* ![alt=login](./utils/images/login.JPG)
 
 
 ## Questions
