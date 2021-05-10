@@ -68,6 +68,7 @@ Please see below for the screenshots of homepage, dashboard and sign in/sign up 
 ![alt=dashboard](./utils/images/dashboard.JPG)
 
 * Sign In / Sign Up:
+
 ![alt=login](./utils/images/login.JPG)
 
 
