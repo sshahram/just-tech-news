@@ -59,16 +59,16 @@ This application is also deployed on Heroku. Please checkout the following link 
 ## Screenshots
 
 Please see below for the screenshots of homepage, dashboard and sign in/sign up pages:
-Homepage:
+* Homepage:
 
-* ![alt=home](./utils/images/homepage.JPG)
+![alt=home](./utils/images/homepage.JPG)
 
-Dashboard:
+* Dashboard:
 
-* ![alt=dashboard](./utils/images/dashboard.JPG)
+![alt=dashboard](./utils/images/dashboard.JPG)
 
-Sign In / Sign Up:
-* ![alt=login](./utils/images/login.JPG)
+* Sign In / Sign Up:
+![alt=login](./utils/images/login.JPG)
 
 
 ## Questions
